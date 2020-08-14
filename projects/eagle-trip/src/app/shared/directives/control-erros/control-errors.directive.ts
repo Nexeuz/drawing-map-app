@@ -76,7 +76,6 @@ export class ControlErrorsDirective implements  OnInit, OnDestroy, AfterViewInit
   }
 
   setErrors(): void {
-    console.log(this.control.errors);
     const controlErrors = this.control.errors;
     if (controlErrors) {
       const firstKey = Object.keys(controlErrors)[0];
