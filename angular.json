@@ -28,7 +28,8 @@
               "projects/eagle-trip/src/assets"
             ],
             "styles": [
-              "projects/eagle-trip/src/styles.scss"
+              "projects/eagle-trip/src/styles.scss",
+              "node_modules/animate.css/animate.css"
             ],
             "scripts": []
           },
