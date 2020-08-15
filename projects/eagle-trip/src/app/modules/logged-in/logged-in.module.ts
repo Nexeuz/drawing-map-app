@@ -7,16 +7,21 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { MapComponent } from './components/map/map.component';
 import {AgmCoreModule} from '@agm/core';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {SharedModule} from '../../shared/shared.module';
+import { NavigationComponent } from './pages/navigation/navigation.component';
 
 
 @NgModule({
-  declarations: [LoggedInComponent, MapComponent],
+  declarations: [LoggedInComponent, MapComponent, NavigationComponent],
   imports: [
     CommonModule,
     LoggedInRoutingModule,
     MatCardModule,
     MatSidenavModule,
-    AgmCoreModule
+    AgmCoreModule,
+    MatToolbarModule,
+    SharedModule
   ]
 })
 export class LoggedInModule { }

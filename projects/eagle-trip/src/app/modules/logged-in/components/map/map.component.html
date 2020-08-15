@@ -1,5 +1,11 @@
-<agm-map
-  style="height: 100%"
-  [latitude]="(coords$ | async)?.latitude"
-  [longitude]="(coords$ | async)?.longitude">
-</agm-map>
+<div class="container-map">
+  <agm-map
+    class="container-map__map"
+    [latitude]="(coords$ | async)?.latitude"
+    [longitude]="(coords$ | async)?.longitude">
+  </agm-map>
+  <div class="container-map__router-navigation">
+    <ng-content></ng-content>
+  </div>
+</div>
+

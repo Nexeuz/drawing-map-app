@@ -1,0 +1,11 @@
+.container-map {
+  position: relative;
+  &__map {
+    height: 100vh;
+  }
+  &__router-navigation {
+    position: absolute;
+    top: 0;
+  }
+}
+

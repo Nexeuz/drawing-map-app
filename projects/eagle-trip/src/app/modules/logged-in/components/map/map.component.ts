@@ -9,10 +9,18 @@ import {UserQuery} from '../../../../core/state/user/user.query';
 export class MapComponent implements OnInit {
 
   coords$ = this.userQuery.currentUserCords$;
+  show = false;
 
   constructor(private userQuery: UserQuery) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.show = true;
+    }, 20000);
+  }
+
+
+  showMap(): void  {
   }
 
 }
