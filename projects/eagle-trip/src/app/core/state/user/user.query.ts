@@ -10,6 +10,8 @@ export class UserQuery extends Query<UserState> {
     .pipe(
       map(it => it.id === '' ? null : it)
     );
+
+  currentUserCords$ = this.select(it =>  ({latitude: it.latitude, longitude: it.longitude}));
   constructor(protected store: UserStore) {
     super(store);
   }

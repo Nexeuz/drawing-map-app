@@ -2,16 +2,19 @@ import { Injectable } from '@angular/core';
 import { Store, StoreConfig } from '@datorama/akita';
 
 export interface UserState {
-   id: string;
-   name: string;
-   email: string;
+  id: string;
+  name: string;
+  email: string;
+  latitude?: string | null;
+  longitude?: string | null;
 }
-
 export function createInitialState(): UserState {
   return {
     id: '',
     name: '',
-    email: ''
+    email: '',
+    latitude: null,
+    longitude: null
   };
 }
 
