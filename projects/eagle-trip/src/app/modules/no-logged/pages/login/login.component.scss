@@ -6,6 +6,12 @@
     margin-right: 10px;
     margin-top: 20vh;
     max-width: 450px;
-  }
-}
 
+  }
+
+}
+mat-progress-bar {
+  position: relative;
+  top: 5px;
+  z-index: 1;
+}

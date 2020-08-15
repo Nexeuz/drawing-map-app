@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {environment} from '../../environments/environment';
+import {environment} from '../../../../../environments/environment';
 import {AkitaNgDevtools} from '@datorama/akita-ngdevtools';
 import {AkitaNgRouterStoreModule} from '@datorama/akita-ng-router-store';
 import {HttpClientModule} from '@angular/common/http';

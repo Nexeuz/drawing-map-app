@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 import {RegularExpressions} from '../../../../core/util/regular-expressions/regular-expressions';
+import {UserService} from '../../../../core/state/user/user.service';
+import {tap} from 'rxjs/operators';
+import {Router} from '@angular/router';
+import {UserQuery} from '../../../../core/state/user/user.query';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'eagle-login',
@@ -9,7 +14,11 @@ import {RegularExpressions} from '../../../../core/util/regular-expressions/regu
 })
 export class LoginComponent implements OnInit {
   form: FormGroup;
-  constructor(private fb: FormBuilder) { }
+  loading$: Observable<boolean> = this.userQuery.selectLoading();
+  constructor(private fb: FormBuilder,
+              private userService: UserService,
+              private userQuery: UserQuery,
+              private router: Router) { }
 
   ngOnInit(): void {
     this.createForm();
@@ -22,4 +31,12 @@ export class LoginComponent implements OnInit {
     });
   }
 
+  submit(): void {
+    this.userService.get()
+      .pipe(
+        tap(it => {
+          this.router.navigateByUrl('');
+        })
+      ).subscribe();
+  }
 }

@@ -1,8 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {UserState, UserStore} from './user.store';
-import { tap } from 'rxjs/operators';
-import {Observable} from 'rxjs';
+import {catchError, delay, tap} from 'rxjs/operators';
+import {Observable, throwError} from 'rxjs';
+import {applyTransaction, transaction} from '@datorama/akita';
+import {environment} from '@env/environment';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
@@ -10,18 +12,29 @@ export class UserService {
   constructor(private userStore: UserStore,
               private http: HttpClient) {
   }
-
   get(): Observable<UserState> {
-    return this.http.get<UserState>('https://localhost:3000/users').pipe(
+    this.userStore.setLoading(true);
+    return this.http.get<UserState>(environment.host).pipe(
+      delay(3000),
       tap(user => {
-        this.update(user);
-    }));
+          this.update(user[0]);
+      }),
+      catchError(it => {
+        this.userStore.setLoading(false);
+        return throwError(it);
+      })
+    );
   }
 
 
 
   update(user: UserState): void {
-    this.userStore._setState(user);
+  applyTransaction(() => {
+  this.userStore.setLoading(false);
+  this.userStore.update(state => ({
+      ...user
+    }));
+  });
   }
 
 }

@@ -9,20 +9,22 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {SharedModule} from '../../shared/shared.module';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
 
 
 
 @NgModule({
   declarations: [NoLoggedComponent, LoginComponent],
-  imports: [
-    CommonModule,
-    NoLoggedRoutingModule,
-    MatCardModule,
-    ReactiveFormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    SharedModule
-  ]
+    imports: [
+        CommonModule,
+        NoLoggedRoutingModule,
+        MatCardModule,
+        ReactiveFormsModule,
+        MatFormFieldModule,
+        MatInputModule,
+        MatButtonModule,
+        SharedModule,
+        MatProgressBarModule
+    ]
 })
 export class NoLoggedModule { }
