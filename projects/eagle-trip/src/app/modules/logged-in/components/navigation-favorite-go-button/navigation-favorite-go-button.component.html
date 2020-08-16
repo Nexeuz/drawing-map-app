@@ -1,0 +1,6 @@
+<div [@enterAnimation] *ngIf="(userFavorites.active$ | async) as favorite" class="container-navigation-forward">
+  <strong>{{ favorite.address }}</strong>
+  <button (click)="hideDialogOrAndPaintDirection()"  mat-raised-button color="accent" role="button">
+    <mat-icon>forward</mat-icon>
+  </button>
+</div>

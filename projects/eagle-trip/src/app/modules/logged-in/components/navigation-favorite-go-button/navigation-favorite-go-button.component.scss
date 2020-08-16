@@ -1,0 +1,10 @@
+.container-navigation-forward {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  strong {
+    font-size: 15px;
+    margin: 0;
+  }
+}

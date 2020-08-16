@@ -1,0 +1,12 @@
+<h2>Mis favoritos</h2>
+<div class="container-navigation-favorite-list">
+  <mat-selection-list #favorites (selectionChange)="setFavorite($event)" [multiple]="false">
+    <ng-container  *ngFor="let favorites of (userFavorites.getAll$ | async)" >
+      <mat-list-option [value]="favorites.id">
+        <mat-icon mat-list-icon>stars</mat-icon>
+        <div mat-line>{{favorites.name}}</div>
+        <small mat-line> {{favorites.address }} </small>
+      </mat-list-option>
+    </ng-container>
+  </mat-selection-list>
+</div>

@@ -15,8 +15,8 @@ export class UserService {
 
   get(): Observable<UserState> {
     this.userStore.setLoading(true);
-    return this.http.get<UserState>(environment.host).pipe(
-      delay(3000),
+    return this.http.get<UserState>(`${environment.host}/users`).pipe(
+      delay(2000),
       tap(user => {
         this.update(user[0]);
       }),

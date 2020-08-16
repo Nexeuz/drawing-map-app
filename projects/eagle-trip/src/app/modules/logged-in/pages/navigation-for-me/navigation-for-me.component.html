@@ -1,5 +1,14 @@
-  <mat-form-field>
+<h2>Iniciar Viaje</h2>
+<div>
+  <mat-form-field class="width-100">
     <mat-label>Dónde te recogemos</mat-label>
     <input disabled [(ngModel)]="term"  matInput>
     <mat-icon matSuffix>gps_fixed</mat-icon>
   </mat-form-field>
+  <eagle-navigation-favorite-list>
+  </eagle-navigation-favorite-list>
+  <mat-divider></mat-divider>
+  <eagle-navigation-favorite-go-button>
+  </eagle-navigation-favorite-go-button>
+
+</div>

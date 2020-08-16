@@ -19,10 +19,13 @@ import { NavigationGuestComponent } from './pages/navigation-guest/navigation-gu
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {FormsModule} from '@angular/forms';
+import { NavigationFavoriteListComponent } from './components/navigation-favorite-list/navigation-favorite-list.component';
+import {MatListModule} from '@angular/material/list';
+import { NavigationFavoriteGoButtonComponent } from './components/navigation-favorite-go-button/navigation-favorite-go-button.component';
 
 
 @NgModule({
-  declarations: [LoggedInComponent, MapComponent, NavigationComponent, NavigationHeaderTabsComponent, NavigationForMeComponent, NavigationColleagueComponent, NavigationGuestComponent],
+  declarations: [LoggedInComponent, MapComponent, NavigationComponent, NavigationHeaderTabsComponent, NavigationForMeComponent, NavigationColleagueComponent, NavigationGuestComponent, NavigationFavoriteListComponent, NavigationFavoriteGoButtonComponent],
   imports: [
     CommonModule,
     LoggedInRoutingModule,
@@ -35,7 +38,8 @@ import {FormsModule} from '@angular/forms';
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatListModule
   ]
 })
 export class LoggedInModule { }

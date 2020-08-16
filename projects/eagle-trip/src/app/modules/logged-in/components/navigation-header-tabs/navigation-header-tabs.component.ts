@@ -7,6 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationHeaderTabsComponent implements OnInit {
 
+  arrayTabs = [
+    {
+      path: 'para-mi',
+      icon: 'person',
+      text: 'Para mi'
+    },
+    {
+      path: 'colega',
+      icon: 'people',
+      text: 'Colega'
+    },
+    {
+      path: 'invitado',
+      icon: 'person_add',
+      text: 'Invitado'
+    },
+
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

@@ -29,7 +29,7 @@ export class ControlErrorsDirective implements  OnInit, OnDestroy, AfterViewInit
   ref: ComponentRef<ControlErrorComponent>;
   container: ViewContainerRef;
   submit$: Observable<Event>;
-  customErrors = {};
+  @Input() customErrors = {};
 
   constructor(
     private vcr: ViewContainerRef,

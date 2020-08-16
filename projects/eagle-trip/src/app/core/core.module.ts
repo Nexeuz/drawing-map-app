@@ -19,6 +19,6 @@ import {NG_ENTITY_SERVICE_CONFIG} from '@datorama/akita-ng-entity-service';
       apiKey: 'AIzaSyCQAvEWehy6PUgcfD4HUZhrkQjqGAKHUq4'
     }),
   ],
-  providers: [{ provide: NG_ENTITY_SERVICE_CONFIG, useValue: { baseUrl: 'https://jsonplaceholder.typicode.com' }}],
+  providers: [{ provide: NG_ENTITY_SERVICE_CONFIG, useValue: { baseUrl: `${environment.host}` }}],
 })
 export class CoreModule { }
