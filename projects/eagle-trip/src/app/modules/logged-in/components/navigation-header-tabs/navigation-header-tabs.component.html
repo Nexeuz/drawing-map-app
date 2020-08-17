@@ -1,6 +1,6 @@
 <div  class="navigation-header-tabs-container mat-elevation-z1">
-  <div  [routerLink]="route.path" *ngFor="let route of arrayTabs; let index = index" class="navigation-header-tabs-container__icons">
-    <a  [color]="ra.isActive? 'primary': ''" routerLinkActive  #ra="routerLinkActive" mat-button disableRipple="true" role="navigation">
+  <div  matRipple [routerLink]="route.path" *ngFor="let route of arrayTabs; let index = index" class="navigation-header-tabs-container__icons ">
+    <a  [color]="ra.isActive? 'primary': ''" class="no-hover-effect" routerLinkActive  #ra="routerLinkActive" mat-button  [disableRipple]="true" role="navigation">
       <mat-icon>{{route.icon}}</mat-icon>
     </a>
     {{route.text}}

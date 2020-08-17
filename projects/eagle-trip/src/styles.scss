@@ -42,3 +42,8 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .width-100 {
    width: 100%;
 }
+
+
+.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay {
+  opacity: 0 !important;
+}

@@ -3,6 +3,14 @@
     class="container-map__map"
     [latitude]="(coords$ | async)?.latitude"
     [longitude]="(coords$ | async)?.longitude">
+    <ng-container *ngIf="(coords$ | async) as myCoords">
+        <ng-container *ngIf="(userFavorites.active$ | async) as active">
+          <agm-direction
+            [destination]="{lat: active.latitude, lng: active.longitude}"
+            [origin]="{lat: myCoords.latitude, lng: myCoords.longitude}">
+          </agm-direction>
+        </ng-container>
+    </ng-container>
   </agm-map>
   <div class="container-map__router-navigation">
     <ng-content></ng-content>

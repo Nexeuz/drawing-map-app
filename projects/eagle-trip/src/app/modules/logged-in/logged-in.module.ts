@@ -22,10 +22,16 @@ import {FormsModule} from '@angular/forms';
 import { NavigationFavoriteListComponent } from './components/navigation-favorite-list/navigation-favorite-list.component';
 import {MatListModule} from '@angular/material/list';
 import { NavigationFavoriteGoButtonComponent } from './components/navigation-favorite-go-button/navigation-favorite-go-button.component';
+import {AgmDirectionModule} from 'agm-direction';
+import {MatRippleModule} from '@angular/material/core';
+import { MapFabBtnComponent } from './components/map-fab-btn/map-fab-btn.component';
+import { ContentSideNavComponent } from './components/content-side-nav/content-side-nav.component';
+import { ContentSideNavProfileComponent } from './components/content-side-nav-profile/content-side-nav-profile.component';
+import { ContentSideNavMenuComponent } from './components/content-side-nav-menu/content-side-nav-menu.component';
 
 
 @NgModule({
-  declarations: [LoggedInComponent, MapComponent, NavigationComponent, NavigationHeaderTabsComponent, NavigationForMeComponent, NavigationColleagueComponent, NavigationGuestComponent, NavigationFavoriteListComponent, NavigationFavoriteGoButtonComponent],
+  declarations: [LoggedInComponent, MapComponent, NavigationComponent, NavigationHeaderTabsComponent, NavigationForMeComponent, NavigationColleagueComponent, NavigationGuestComponent, NavigationFavoriteListComponent, NavigationFavoriteGoButtonComponent, MapFabBtnComponent, ContentSideNavComponent, ContentSideNavProfileComponent, ContentSideNavMenuComponent],
   imports: [
     CommonModule,
     LoggedInRoutingModule,
@@ -39,7 +45,9 @@ import { NavigationFavoriteGoButtonComponent } from './components/navigation-fav
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    MatListModule
+    MatListModule,
+    AgmDirectionModule,
+    MatRippleModule
   ]
 })
 export class LoggedInModule { }

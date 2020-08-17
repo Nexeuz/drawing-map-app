@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {UserFavoritesService} from '../../../../core/state/user-favorite/user-favorites.service';
-import {Observable} from 'rxjs';
-import {UserFavorite} from '../../../../core/state/user-favorite/user-favorite.model';
 import {animate, style, transition, trigger} from '@angular/animations';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'eagle-navigation-favorite-go-button',
@@ -25,12 +24,14 @@ import {animate, style, transition, trigger} from '@angular/animations';
 })
 export class NavigationFavoriteGoButtonComponent implements OnInit {
 
-  constructor(private userFavorites: UserFavoritesService) { }
+  constructor(public userFavorites: UserFavoritesService,
+              private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  hideDialogOrAndPaintDirection(): void {
-    this.userFavorites.paintDirection(true);
+  hideDialogOrAndPaintDirection(id: number): void {
+    this.userFavorites.store.setActive(id);
+    this.router.navigateByUrl('');
   }
 }

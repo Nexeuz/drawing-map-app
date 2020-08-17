@@ -5,8 +5,8 @@ export interface UserState {
   id: string;
   name: string;
   email: string;
-  latitude?: string | null;
-  longitude?: string | null;
+  latitude?: number | null;
+  longitude?: number | null;
 }
 export function createInitialState(): UserState {
   return {

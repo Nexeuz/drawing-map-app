@@ -15,7 +15,7 @@ export class NavigationFavoriteListComponent implements OnInit {
   }
 
   setFavorite(selection: MatSelectionListChange): void {
-    this.userFavorites.store.setActive(selection.source._value[0]);
+    this.userFavorites.setSelected(selection.option.value);
   }
 
 }

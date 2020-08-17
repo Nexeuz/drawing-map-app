@@ -1233,6 +1233,11 @@
   resolved "https://registry.yarnpkg.com/@types/googlemaps/-/googlemaps-3.39.12.tgz#2546b5256a6555f929e130866ee2ee72931062fc"
   integrity sha512-z1RMvlQfmsLbg5kc0dGjSHK7DL64mOCbbtqp/Le2M3ov7xPB1d+stia38hqmOXw5dPO1dL/5fscn73d0uomkbw==
 
+"@types/googlemaps@^3.39.9":
+  version "3.39.13"
+  resolved "https://registry.yarnpkg.com/@types/googlemaps/-/googlemaps-3.39.13.tgz#a2649ac618cb15bd04ad8700c41693c8c1f90e21"
+  integrity sha512-R/k5WKe8zQHo9oFRINuX/1haKYRkKEfItnBGrSjspbXXITakRdsj6daQIdL1+Pt84lnzduWurxNA5k0fgPMQUg==
+
 "@types/jasmine@*", "@types/jasmine@~3.5.0":
   version "3.5.12"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-3.5.12.tgz#5c378c1545cdc7cb339cff5578f854b6d1e0a17d"
@@ -1529,6 +1534,14 @@ aggregate-error@^3.0.0:
   dependencies:
     clean-stack "^2.0.0"
     indent-string "^4.0.0"
+
+agm-direction@^0.8.6:
+  version "0.8.6"
+  resolved "https://registry.yarnpkg.com/agm-direction/-/agm-direction-0.8.6.tgz#94339ceb667fb0a44aefce7bbe9db7592dbbd61c"
+  integrity sha512-rnWU/gDtQwf9AaACNIl5jDecNKJ+Yd1TgerI8E7TPMkM07mX2R0wrGjHI80qQBM2yB5pUg3iJtNSgDsbmNEzcg==
+  dependencies:
+    "@types/googlemaps" "^3.39.9"
+    tslib "^2.0.0"
 
 ajv-errors@^1.0.0:
   version "1.0.1"

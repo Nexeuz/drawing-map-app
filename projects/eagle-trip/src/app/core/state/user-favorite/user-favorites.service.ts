@@ -9,15 +9,16 @@ import {UserFavorite} from './user-favorite.model';
 export class UserFavoritesService extends NgEntityService<UserFavoritesState> {
   getAll$ = this.query.selectAll();
   active$: Observable<UserFavorite | UserFavorite[]> = this.query.selectActive<UserFavorite>();
+  preSelected$: Observable<UserFavorite> = this.query.select(it => it.ui.paintDirectionObject);
   constructor(public store: UserFavoritesStore,
               public query: UserFavoritesQuery) {
     super(store);
   }
 
- paintDirection(value: boolean): void {
+ setSelected(user: UserFavorite): void {
     this.store.update({
       ui: {
-        paintDirection: value
+        paintDirectionObject: user
       }
     });
   }

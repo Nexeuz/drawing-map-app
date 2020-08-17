@@ -1,7 +1,7 @@
 .container-map {
   position: relative;
   &__map {
-    height: 100vh;
+    height: calc(100vh - 64px);
   }
   &__router-navigation {
     position: absolute;

@@ -5,12 +5,12 @@ import {EntityState, EntityStore, StoreConfig} from '@datorama/akita';
 
 export interface UserFavoritesState extends EntityState<UserFavorite, number> {
   ui: {
-    paintDirection: boolean
+    paintDirectionObject: UserFavorite | null
   };
 }
 
 const initialState: UserFavoritesState = {
-  ui: { paintDirection: false }
+  ui: { paintDirectionObject: null }
 };
 
 @Injectable({ providedIn: 'root' })
