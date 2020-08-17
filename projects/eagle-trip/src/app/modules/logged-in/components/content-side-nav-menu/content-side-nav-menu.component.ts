@@ -9,32 +9,32 @@ export class ContentSideNavMenuComponent implements OnInit {
 
   menuItems = [
     {
-      path: 'navigator',
+      path: 'navigator/para-mi',
       icon: 'drive_eta',
-      text: 'Pedir mi aguila'
+      text: 'Pedir Agila'
     },
     {
-      path: '#',
+      path: '',
       icon: 'local_airport',
       text: 'Vuelos'
     },
     {
-      path: '#',
+      path: '',
       icon: 'rv_hookup',
       text: 'Rutas'
     },
     {
-      path: '#',
+      path: '',
       icon: 'settings',
       text: 'Administrar'
     },
     {
-      path: '#',
+      path: '',
       icon: 'insert_chart_outlined',
       text: 'Estadisticas'
     },
     {
-      path: '#',
+      path: '',
       icon: 'payment',
       text: 'Medios de pago'
     }

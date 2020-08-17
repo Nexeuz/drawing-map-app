@@ -1,1 +1,5 @@
-<p>content-side-nav-profile works!</p>
+<div class="container-content-side-nav-profile-image">
+  <img alt="Image profile" height="100" width="100" src="assets/profile.png">
+  <h2>{{ (userQuery.currentUserStatus$ | async)?.name }}</h2>
+    <p>Beneficiario</p>
+</div>

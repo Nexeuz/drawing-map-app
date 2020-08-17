@@ -1,1 +1,10 @@
-<p>content-side-nav-menu works!</p>
+<div class="container-navigation-favorite-list">
+  <mat-selection-list  [multiple]="false">
+    <ng-container  *ngFor="let item of menuItems" >
+      <mat-list-option [routerLink]="item.path">
+        <mat-icon mat-list-icon>{{ item.icon }}</mat-icon>
+        <p>{{item.text}}</p>
+      </mat-list-option>
+    </ng-container>
+  </mat-selection-list>
+</div>

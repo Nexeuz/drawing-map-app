@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UserQuery} from '../../../../core/state/user/user.query';
 
 @Component({
   selector: 'eagle-content-side-nav-profile',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentSideNavProfileComponent implements OnInit {
 
-  constructor() { }
+  constructor(public userQuery: UserQuery) { }
 
   ngOnInit(): void {
   }

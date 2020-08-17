@@ -3,7 +3,7 @@
     <a  [color]="ra.isActive? 'primary': ''" class="no-hover-effect" routerLinkActive  #ra="routerLinkActive" mat-button  [disableRipple]="true" role="navigation">
       <mat-icon>{{route.icon}}</mat-icon>
     </a>
-    {{route.text}}
+    <span [class.navigation-header-tabs-container__is-active-text]="ra.isActive" routerLinkActive #ra="routerLinkActive" >{{route.text}}</span>
   </div>
 </div>
 

@@ -32,11 +32,14 @@ export class LoginComponent implements OnInit {
   }
 
   submit(): void {
-    this.userService.get()
-      .pipe(
-        tap(it => {
-          this.router.navigateByUrl('');
-        })
-      ).subscribe();
+    if (this.form.valid) {
+      this.userService.get()
+        .pipe(
+          tap(it => {
+            this.router.navigateByUrl('');
+          })
+        ).subscribe();
+    }
+
   }
 }

@@ -1,3 +1,4 @@
+@import "../../../../../theme/variables";
 .navigation-header-tabs-container {
   cursor: pointer;
   display: flex;
@@ -17,5 +18,9 @@
     flex-direction: column;
     align-items: center;
 
+  }
+
+  &__is-active-text {
+    color: $primaryPalette;
   }
 }
