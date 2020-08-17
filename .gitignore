@@ -43,3 +43,7 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+
+
+#security api key
+/environments/api-maps-key.ts

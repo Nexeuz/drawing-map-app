@@ -2,9 +2,12 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import {API_MAPS_KEY } from './api-maps-key';
+
 export const environment = {
   production: false,
-  host: 'http://localhost:3000'
+  host: 'http://localhost:3000',
+  apiMapsKey: API_MAPS_KEY
 };
 
 /*

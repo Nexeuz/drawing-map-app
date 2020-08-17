@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {environment} from '../../../../../environments/environment';
+import {environment} from '@env/environment';
 import {AkitaNgDevtools} from '@datorama/akita-ngdevtools';
 import {AkitaNgRouterStoreModule} from '@datorama/akita-ng-router-store';
 import {HttpClientModule} from '@angular/common/http';
@@ -16,7 +16,7 @@ import {NG_ENTITY_SERVICE_CONFIG} from '@datorama/akita-ng-entity-service';
     AkitaNgRouterStoreModule.forRoot(),
     HttpClientModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyCQAvEWehy6PUgcfD4HUZhrkQjqGAKHUq4'
+      apiKey: environment.apiMapsKey
     }),
   ],
   providers: [{ provide: NG_ENTITY_SERVICE_CONFIG, useValue: { baseUrl: `${environment.host}` }}],
