@@ -7,12 +7,12 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./modules/logged-in/logged-in.module').then(m => m.LoggedInModule),
-   // canActivate: [AuthLoggedGuard]
+   canActivate: [AuthLoggedGuard]
   },
   {
     path: 'login',
     loadChildren: () => import('./modules/no-logged/no-logged.module').then(m => m.NoLoggedModule),
-    // canActivate: [AuthNoLoggedGuard]
+    canActivate: [AuthNoLoggedGuard]
   }
 ];
 
