@@ -1,7 +1,7 @@
-import { FormErrors } from './form-errors';
+import { FORM_ERRORS } from './form-errors';
 
 describe('FormErrors', () => {
   it('should create an instance', () => {
-    expect(new FormErrors()).toBeTruthy();
+    expect( FORM_ERRORS).toBeTruthy();
   });
 });

@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavigationHeaderTabsComponent } from './navigation-header-tabs.component';
+import {RouterTestingModule} from '@angular/router/testing';
 
 describe('HeaderNavigationComponent', () => {
   let component: NavigationHeaderTabsComponent;
@@ -8,7 +9,8 @@ describe('HeaderNavigationComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavigationHeaderTabsComponent ]
+      declarations: [ NavigationHeaderTabsComponent ],
+      imports: [RouterTestingModule]
     })
     .compileComponents();
   }));
