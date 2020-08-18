@@ -2,6 +2,9 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @import '~@angular/material/theming';
+@import 'util-scss/responsive-mixin';
+@import 'theme/theme';
+@import 'theme/variables';
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -12,8 +15,8 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$eagle-trip-primary: mat-palette($mat-indigo);
-$eagle-trip-accent: mat-palette($mat-pink, A200, A100, A400);
+$eagle-trip-primary: mat-palette($mi-aguila);
+$eagle-trip-accent: mat-palette($mat-blue-grey, A700, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $eagle-trip-warn: mat-palette($mat-red);
@@ -37,3 +40,12 @@ $eagle-trip-theme: mat-light-theme((
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.width-100 {
+   width: 100%;
+}
+
+
+.mat-button:hover:not(.mat-button-disabled) .mat-button-focus-overlay {
+  opacity: 0 !important;
+}

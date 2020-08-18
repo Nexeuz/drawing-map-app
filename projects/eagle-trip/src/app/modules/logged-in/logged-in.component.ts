@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {UserFavoritesService} from '../../core/state/user-favorite/user-favorites.service';
 
 @Component({
   selector: 'eagle-logged-in',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoggedInComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userFavorites: UserFavoritesService) { }
 
   ngOnInit(): void {
+    this.userFavorites.get()
+      .subscribe();
   }
 
 }

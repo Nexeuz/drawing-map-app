@@ -1,0 +1,5 @@
+@import "~@angular/material/theming";
+@import "theme";
+
+$primaryPalette: map-get($mi-aguila, 500);
+$accentPalette: map-get($mat-blue-grey, 700);

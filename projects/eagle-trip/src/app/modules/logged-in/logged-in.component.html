@@ -1,1 +1,12 @@
-<p>logged-in works!</p>
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #matSidenav  mode="side">
+    <eagle-content-side-nav></eagle-content-side-nav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <eagle-header [sideNav]="matSidenav"></eagle-header>
+    <eagle-map>
+      <router-outlet></router-outlet>
+    </eagle-map>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

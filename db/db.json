@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Nicolas Falla Rios",
+      "email": "nicolasfalla15@gmail.com"
+    }
+  ],
+  "user-favorites": [
+    {
+      "id": 1,
+      "latitude": 4.6785568,
+      "longitude": -74.0557408,
+      "name": "Wework Calle 93",
+      "address": " Cl. 93 #19-55, Bogotá"
+    },
+    {
+      "id": 2,
+      "name": "Rappi",
+      "latitude": 4.6787514,
+      "longitude": -74.0558571,
+      "address": "Cl. 93 #19-58, Bogotá"
+    },
+    {
+      "id": 3,
+      "name": "Embajada de Francia",
+      "latitude": 4.6774351,
+      "longitude": -74.0500059,
+      "address": "Cra. 11 #93-12, Bogotá"
+    },
+    {
+      "id": 4,
+      "name": "Parque de la 93",
+      "latitude": 4.6774351,
+      "longitude": -74.0488345,
+      "address": " Cl. 93 #12-41, Bogotá"
+    },
+    {
+      "id": 5,
+      "name": "Parque Simón Bolivar",
+      "latitude": 4.6774355,
+      "longitude": -74.0851476,
+      "address": "Av. Calle 53 y Av. Esmeralda"
+    },
+    {
+      "id": 6,
+      "name": "Aeropuerto Internacional el Dorado",
+      "latitude": 4.6774355,
+      "longitude": -74.0851476,
+      "address": "Ac. 26 #103-9, Bogotá"
+    }
+  ]
+}

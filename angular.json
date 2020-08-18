@@ -28,7 +28,8 @@
               "projects/eagle-trip/src/assets"
             ],
             "styles": [
-              "projects/eagle-trip/src/styles.scss"
+              "projects/eagle-trip/src/styles.scss",
+              "node_modules/animate.css/animate.css"
             ],
             "scripts": []
           },
@@ -36,8 +37,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "projects/eagle-trip/src/environments/environment.ts",
-                  "with": "projects/eagle-trip/src/environments/environment.prod.ts"
+                  "replace": "environments/environment.ts",
+                  "with": "environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
