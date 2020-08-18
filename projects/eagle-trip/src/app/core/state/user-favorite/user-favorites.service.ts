@@ -19,6 +19,9 @@ export class UserFavoritesService extends NgEntityService<UserFavoritesState> {
     super(store);
   }
 
+  /**
+   * Update current UI selected user
+   */
  setSelected(user: UserFavorite): void {
     this.store.update({
       ui: {
