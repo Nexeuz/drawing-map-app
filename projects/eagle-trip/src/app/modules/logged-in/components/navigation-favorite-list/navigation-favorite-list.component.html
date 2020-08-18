@@ -9,4 +9,7 @@
       </mat-list-option>
     </ng-container>
   </mat-selection-list>
+  <ng-container *ngIf="(userFavorites.getAll$ | async)?.length === 0">
+    <p>No tienes items favoritos</p>
+  </ng-container>
 </div>

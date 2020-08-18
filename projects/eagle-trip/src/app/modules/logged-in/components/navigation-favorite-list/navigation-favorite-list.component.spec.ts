@@ -78,4 +78,11 @@ describe('NavigationFavoriteListComponent', () => {
     expect(todos.length).toEqual(2);
   });
 
+  it('should display there arent favorites', () => {
+    fixture.detectChanges();
+    userFavoritesService.store.set([]);
+    const todos = fixture.debugElement.query(By.css('p'));
+    expect(todos.nativeElement.innerText).toEqual('No tienes items favoritos');
+  });
+
 });
