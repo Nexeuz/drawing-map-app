@@ -13,6 +13,9 @@ export class UserService {
               private http: HttpClient) {
   }
 
+  /**
+   * Get Current user and save in the store
+   */
   get(): Observable<UserState> {
     this.userStore.setLoading(true);
     return this.http.get<UserState>(`${environment.host}/users`).pipe(
@@ -27,7 +30,9 @@ export class UserService {
     );
   }
 
-
+  /**
+   * Update user an save in the store
+   */
   update(user: UserState): void {
     applyTransaction(() => {
       this.userStore.setLoading(false);
@@ -37,6 +42,9 @@ export class UserService {
     });
   }
 
+  /**
+   * update User current coords
+   */
   updateCoords(latitude, longitude): void {
     this.userStore.update(state => ({
         longitude,

@@ -34,9 +34,15 @@ export class ControlErrorsDirective implements  OnInit, OnDestroy, AfterViewInit
   constructor(
     private vcr: ViewContainerRef,
     private resolver: ComponentFactoryResolver,
+    /**
+     * mark this directive as Optional
+     */
     @Optional() controlErrorContainer: ControlErrorContainerDirective,
     @Inject(FORM_ERRORS) public errors,
     private el: ElementRef<HTMLInputElement>,
+    /**
+     * mark directive's container
+     */
     @Optional() @Host() private form: FormSubmitDirective,
     private controlDir: NgControl) {
     this.container = controlErrorContainer ? controlErrorContainer.vcr : vcr;
@@ -51,6 +57,9 @@ export class ControlErrorsDirective implements  OnInit, OnDestroy, AfterViewInit
     return this.controlDir.control;
   }
 
+  /**
+   * Set error and append in the sibling view that could be ControlErrorContainer or this view itself
+   */
   setError(text: string): void {
     if (!this.ref) {
       const factory = this.resolver.resolveComponentFactory(ControlErrorComponent);
@@ -59,11 +68,16 @@ export class ControlErrorsDirective implements  OnInit, OnDestroy, AfterViewInit
     this.ref.instance.text = text;
   }
 
-
+  /**
+   * When user focus ControlErrorContainer or this directive, set error
+   */
   @HostListener('focusin', ['$event']) onFocus(event): void {
     this.setErrors();
   }
 
+  /**
+   * Listen onSubmit form and valueChanges control for set error
+   */
   ngAfterViewInit(): void {
     merge(
       this.submit$,
@@ -75,6 +89,9 @@ export class ControlErrorsDirective implements  OnInit, OnDestroy, AfterViewInit
     });
   }
 
+  /**
+   * Get current errors, and search corresponding text
+   */
   setErrors(): void {
     const controlErrors = this.control.errors;
     if (controlErrors) {
